@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth snap-both snap-mandatory">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rose Works</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Climate+Crisis&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Motion -->
+    <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
+    <script>
+        const {
+            animate,
+            scroll,
+            stagger,
+            inView,
+            transform
+        } = Motion;
+    </script>
+
+    <!-- Tailwind -->
+    <link rel="stylesheet" href="output.css" />
+</head>
+
+<body class="bg-[#121212]">
+    <!-- Navbar -->
+    <nav>
+        <div class="fixed top-0 left-0 right-0 z-50 py-3 text-center">
+            <p class="text-xs text-orange-100 font-climate md:text-base nav-text">ROSE WORKS
+            </p>
+        </div>
+        <div class="fixed left-0 z-50 hidden -rotate-90 -translate-x-12 top-1/2 md:block">
+            <p class="text-xs text-orange-100 font-climate md:text-base nav-text">ROSE WORKS
+            </p>
+        </div>
+        <div class="fixed right-0 z-50 hidden rotate-90 translate-x-12 top-1/2 md:block">
+            <p class="text-xs text-orange-100 font-climate md:text-base nav-text">ROSE WORKS
+            </p>
+        </div>
+        <div class="fixed top-0 right-0 z-50 px-6 py-3">
+            <button id="menuBtn" class="flex flex-col gap-1.5">
+                <p class="text-xs font-medium text-orange-100 font-anton md:text-base">III
+                    MENU</p>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Menu Dropdown -->
+    <div id="menuDropdown"
+        class="fixed inset-0 z-40 transition-transform duration-500 ease-in-out transform -translate-y-full bg-black">
+        <div class="flex items-center justify-center h-screen">
+            <div class="text-center">
+                <!-- Mobile Menu -->
+                <div class="flex flex-col gap-8 md:hidden">
+                    <a href="#" class="text-2xl text-orange-100 font-anton hover:text-orange-200">START</a>
+                    <a href="#" class="text-2xl text-orange-100 font-anton hover:text-orange-200">PROJECTS</a>
+                    <a href="#" class="text-2xl text-orange-100 font-anton hover:text-orange-200">ABOUT
+                        US</a>
+                    <a href="#" class="text-2xl text-orange-100 font-anton hover:text-orange-200">CONTACT</a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="justify-between hidden md:flex md:flex-row md:gap-16 lg:gap-44">
+                    <a href="#" class="text-3xl text-orange-100 lg:text-4xl font-anton hover:text-orange-200">START</a>
+                    <a href="#"
+                        class="text-3xl text-orange-100 lg:text-4xl font-anton hover:text-orange-200">PROJECTS</a>
+                    <a href="#" class="text-3xl text-orange-100 lg:text-4xl font-anton hover:text-orange-200">ABOUT
+                        US</a>
+                    <a href="#"
+                        class="text-3xl text-orange-100 lg:text-4xl font-anton hover:text-orange-200">CONTACT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="relative h-screen">
+        <!-- Horizontal Scroll 1 -->
+        <div class="horizontal-scroll-container1 h-[300vh] relative">
+            <div class="sticky top-0 h-screen overflow-hidden">
+                <div class="flex horizontal-scroll1">
+                    <!-- Section 1 -->
+                    <div class="flex flex-col flex-grow-0 flex-shrink-0 w-screen h-screen flex-basis-auto panel1">
+                        <div class="flex items-center justify-center h-screen bg-[#ff7438]">
+                            <!-- Section 1 Background -->
+                            <div class="absolute inset-0 z-0 overflow-hidden">
+                                <div class="relative z-50 w-full h-full rose">
+                                    <img src="assets/img/rose.png" alt="bg"
+                                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-90 w-[80%] select-none pointer-events-none" />
+                                </div>
+                            </div>
+                            <img src="assets/svg/star.svg" alt="star"
+                                class="absolute z-10 hidden pointer-events-none select-none bottom-20 right-24 size-24 md:block svg1-section1" />
+                            <img src="assets/svg/star.svg" alt="star"
+                                class="absolute z-10 pointer-events-none select-none top-16 left-16 size-32 svg1-section1" />
+                            <!-- Section 1 Content -->
+                            <div class="z-10 flex flex-col items-center px-4 md:px-0 animate1">
+                                <p class="mb-3 text-base text-orange-100 md:mb-5 md:text-lg font-inter">
+                                    WE ARE
+                                </p>
+                                <!-- minor bug: input text on js -->
+                                <h1
+                                    class="max-w-xl text-5xl font-medium text-center text-orange-100 md:text-7xl lg:text-8xl font-anton reveal-text1 md:line-clamp-2 lg:line-clamp-3">
+                                    ROSE WORKS. DESIGN AGENCY IN STHLM</h1>
+                                <p class="mt-3 text-base text-orange-100 md:mt-5 md:text-lg font-inter">
+                                    CREATING NEW WORLDS
+                                </p>
+                                <button onclick="jumpToSection2()"
+                                    class="absolute flex items-center gap-2 text-orange-100 font-climate bottom-8">
+                                    EXPLORE
+                                    <img src="assets/img/right.png" alt="right" class="size-8" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div class="flex flex-col flex-grow-0 flex-shrink-0 w-screen h-screen flex-basis-auto panel1">
+                        <div class="flex items-center justify-center h-screen bg-[#121212] relative">
+                            <!-- Section 2 Background -->
+                            <div class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-[40vw]">
+                                <svg width="100%" height="100%" viewBox="0 0 400 400" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="svg1-section2">
+                                    <defs>
+                                        <linearGradient id="0" x1="0.07" y1="0.25" x2="0.93" y2="0.75">
+                                            <stop offset="0%" stop-color="#ff7438" />
+                                            <stop offset="100%" stop-color="#742a2a" />
+                                            <stop offset="100%" stop-color="rgba(255, 0, 0, 0)" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle cx="200" cy="200" r="200" fill="url(#0)" />
+                                </svg>
+                            </div>
+                            <div class="absolute left-0 w-[40vw] -ml-5 h-screen hidden lg:block">
+                                <svg width="379" height="100%" viewBox="0 0 379 842.5" preserveAspectRatio="none"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full svg2-section2">
+                                    <path
+                                        d="M 0 -13 C 46.167 -13 92.333 -13 138.5 -13 C 153.134 39.164 167.768 91.328 182.402 143.491 C 247.768 376.494 313.134 609.497 378.5 842.5 L 0 842.5 L 0 -13 Z"
+                                        fill="#ff7438" />
+                                </svg>
+                            </div>
+                            <!-- Section 2 Content -->
+                            <div class="z-10 flex flex-col items-center justify-center max-w-screen-md px-12 animate2">
+                                <p class="text-xs text-orange-100 font-inter md:text-sm">OUR MISSSION
+                                    <span class="font-climate">INNOVATE IMPACT</span>
+                                </p>
+
+                                <h2
+                                    class="max-w-xs text-4xl text-center text-orange-100 md:max-w-xl md:text-7xl font-anton md:line-clamp-3 reveal-text2">
+                                    CREATING SMART, HUMAN-CENTERED DESIGN WITH IMPACT
+                                </h2>
+                                <button onclick="jumpToSection3()"
+                                    class="absolute flex items-center gap-2 text-orange-100 font-climate bottom-8">
+                                    <img src="assets/img/right.png" alt="right" class="size-8" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3 -->
+                    <div class="flex flex-col flex-grow-0 flex-shrink-0 w-screen h-screen flex-basis-auto panel1">
+                        <div class="flex items-center justify-center h-screen bg-[#121212]">
+                            <div class="flex flex-col max-w-screen-md gap-2 p-10">
+                                <div class="flex flex-row items-center gap-4 animate3">
+                                    <img src="assets/img/ceo.png " alt="ceo " class="rounded-full size-10 md:hidden" />
+                                    <p class="text-md text-[#ff7438] font-inter md:translate-x-20">
+                                        Richard Jonson
+                                        <span class="ml-2 font-climate">CEO</span>
+                                    </p>
+                                </div>
+                                <div class="flex flex-row gap-4 animate3">
+                                    <img src="assets/img/ceo.png " alt="ceo "
+                                        class="hidden rounded-full size-16 md:block" />
+                                    <div class="flex flex-col gap-2 border border-[#ff7438] p-6 rounded-2xl card">
+                                        <p class="text-3xl text-[#ff7438] font-anton font-bold reveal-text3">
+                                            AT ROSE WORKS, WE'RE NOT JUST DESIGNING
+                                        </p>
+
+                                        <p class="text-sm text-[#ff7438] font-inter">
+                                            we're cultivating a sustainable
+                                            future, one creative solution at a
+                                            time. Together, we transform ideas
+                                            into impactful designs, guiding our
+                                            clients toward a greener tomorrow.
+                                            Let's innovate, inspire, and make a
+                                            difference—one project at a time
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Horizontal Scroll 2 -->
+        <div class="horizontal-scroll-container2 h-[300vh] relative">
+            <div class="sticky top-0 h-screen overflow-hidden">
+                <div class="flex horizontal-scroll2">
+                    <!-- Section 4 -->
+                    <div class="flex flex-col flex-grow-0 flex-shrink-0 w-screen h-screen panel2 flex-basis-auto">
+                        <div class="flex items-center justify-center h-screen bg-[#121212]">
+                            <!-- Section 4 Background -->
+                            <div
+                                class="absolute -translate-x-1/2 -translate-y-[40%] left-1/2 top-1/2 w-[30vw] sm:w-[25vw] blur-2xl">
+                                <svg width="100%" height="100%" viewBox="0 0 400 400" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="svg1-section4">
+                                    <defs>
+                                        <linearGradient id="1" x1="0.7" y1="0.04" x2="0.3" y2="0.96">
+                                            <stop offset="30%" stop-color="#ff7438" />
+                                            <stop offset="100%" stop-color="#000000" />
+                                            <stop offset="100%" stop-color="#000000" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle cx="200" cy="200" r="200" fill="url(#1)" />
+                                </svg>
+                            </div>
+                            <!-- Section 4 Content -->
+                            <div class="z-10 flex flex-col items-center max-w-screen-md text-center">
+                                <div class="flex flex-col items-center gap-4 animate4">
+                                    <p class="text-sm text-orange-100 md:text-lg font-inter">
+                                        CHECK OUT
+                                        <span class="font-climate">OUR WORK</span>
+                                    </p>
+                                    <p
+                                        class="max-w-md text-5xl font-bold text-orange-100 md:max-w-2xl md:text-7xl font-anton reveal-text4">
+                                        HERE ARE SOME OF THE THINGS WE'VE BUILT
+                                    </p>
+                                </div>
+                            </div>
+                            <button onclick="jumpToSection5()"
+                                class="absolute flex items-center gap-2 text-orange-100 font-climate bottom-8">
+                                <img src="assets/img/right.png" alt="right" class="size-8" />
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Section 5 -->
+                    <div class="flex flex-col flex-grow-0 flex-shrink-0 w-screen h-screen panel2 flex-basis-auto">
+                        <div class="flex items-center justify-center h-screen bg-[#121212]">
+                            <div class="flex flex-col items-center animate5">
+                                <img src="assets/img/arkestra1.png" alt="arkestra1" class="w-10/12 -mb-12">
+                                <div
+                                    class="bg-[#fffdcf]/90 backdrop-blur-sm p-6 rounded-2xl max-w-screen-md flex flex-col mx-4 gap-2 relative">
+                                    <h2 class="text-2xl md:text-3xl text-[#121212] font-anton">ARKESTRA - VISUALS
+                                        FOR MACOS</h2>
+                                    <p class="text-xs md:text-sm text-[#121212] font-inter font-medium">
+                                        An application for graphic design, developed for macOS and compatible with most
+                                        computers. Our design team the user interface and
+                                        established the brand styling. We collaborated closely with the software
+                                        group to ensure a seamless
+                                        and feasible setup. Try it out at www.arkestra.app
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 6 -->
+                    <div class="flex flex-col flex-grow-0 flex-shrink-0 w-screen h-screen panel2 flex-basis-auto">
+                        <div class="flex items-center justify-center h-screen bg-[#ff7438] ">
+                            <div class="flex flex-col items-center animate6">
+                                <img src="assets/img/arkestra2.png" alt="arkestra2" class="w-10/12 -mb-12">
+                                <div
+                                    class="bg-[#fffdcf]/90 backdrop-blur-sm p-6 rounded-2xl max-w-screen-md flex flex-col mx-4 gap-2 relative">
+                                    <h2 class="text-2xl md:text-3xl text-[#ff7438] font-anton">ARKESTRA - VISUALS FOR
+                                        MACOS</h2>
+                                    <p class="text-xs md:text-sm text-[#ff7438] font-inter">An application for
+                                        graphic design,
+                                        developed for macOS and
+                                        compatible with most computers. Our design team crafted the user interface and
+                                        established the brand
+                                        styling. We collaborated closely with the software group to ensure a seamless
+                                        and feasible setup. Try it out at www.arkestra.app
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 7 -->
+        <div class="flex items-center w-full justify-center h-screen bg-[#ff7438] overflow-hidden relative">
+            <!-- Section 7 Background -->
+            <div
+                class="absolute lg:left-0 lg:top-0 -right-28 top-1/2 -translate-y-1/2 lg:translate-y-0 w-[40vw] h-[40vw] z-0">
+                <svg width="100%" height="100%" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="lightEffect" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                            <stop offset="0%" stop-color="#ffffd0" stop-opacity="0.6" />
+                            <stop offset="50%" stop-color="#ffffd0" stop-opacity="0.2" />
+                            <stop offset="100%" stop-color="#ffffd0" stop-opacity="0" />
+                        </radialGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="8" result="blur" />
+                            <feComposite in="blur" in2="SourceGraphic" operator="over" />
+                        </filter>
+                    </defs>
+                    <circle cx="200" cy="200" r="180" fill="url(#lightEffect)" filter="url(#glow)" />
+                </svg>
+            </div>
+            <!-- Section 7 Content -->
+            <div class="relative z-10 flex flex-col items-center max-w-screen-md gap-2 p-6 animate7">
+                <div class="flex flex-row items-center justify-end w-full gap-2">
+                    <img src="assets/img/cto.png" alt="cto" class="block rounded-full size-8 lg:hidden">
+                    <p class="text-sm text-black font-inter lg:-translate-x-20">Rita Avards
+                        <span class="font-climate">CTO</span>
+                    </p>
+                </div>
+                <div class="flex flex-row-reverse gap-4">
+                    <img src="assets/img/cto.png" alt="cto" class="hidden rounded-full size-16 lg:block">
+                    <div
+                        class="flex overflow-y-scroll flex-col gap-2 p-6 max-h-[25rem] rounded-2xl border border-black scrollable-div scrollbar-hide">
+                        <p class="text-3xl font-anton md:text-5xl reveal-text7">THE PURPOSE OF OR SERVICE</p>
+                        <div class="flex flex-col gap-4 text-sm font-inter lg:text-base content-section7">
+                            <p>Our philosophy is rooted in the belief that design is more than just aesthetics—it is
+                                a powerful tool for storytelling, problem-solving, and creating meaningful
+                                connections. We approach every project with the understanding that good design
+                                emerges from a deep collaboration between creativity, strategy, and empathy.</p>
+
+                            <p>We believe that design has the potential to shape the way people interact with
+                                brands, spaces, and ideas. Our process is driven by curiosity and a commitment to
+                                human-centered thinking. Whether we are building a visual identity, designing a
+                                product interface, or crafting an immersive experience, our goal is to create
+                                solutions that resonate on an emotional level while also addressing practical needs.
+                            </p>
+
+                            <p>At the heart of our philosophy is the idea that design is a continuous
+                                dialogue—between designer and client, brand and audience, form and function. We see
+                                each project as a unique opportunity to explore new perspectives, challenge
+                                conventions, and push creative boundaries. Our work is not just about delivering
+                                polished visuals; it's about creating experiences that inspire, engage, and leave a
+                                lasting impact.</p>
+
+                            <p>Ultimately, our studio thrives on the belief that great design is transformative. It
+                                has the power to elevate brands, enrich lives, and create meaningful change in the
+                                world. This is why we approach each project not just as a task, but as a
+                                partnership—one where we work closely with our clients to bring their vision to life
+                                in ways that are both innovative and authentic.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Section 8 -->
+        <div class="flex items-center justify-center h-screen bg-[#121212] overflow-hidden relative">
+            <!-- Section 8 Background -->
+            <img src="assets/svg/star-white.svg" alt="star"
+                class="absolute top-0 left-0 z-10 lg:left-auto lg:top-auto lg:bottom-0 lg:right-0 size-40 svg1-section8">
+            <img src="assets/svg/star-white.svg" alt="star"
+                class="absolute z-10 top-24 left-24 lg:left-auto lg:top-auto lg:bottom-0 lg:right-24 size-20 svg1-section8">
+            <div
+                class="absolute inset-y-auto border border-white rounded-full -right-[40%] size-[35rem] block lg:hidden">
+            </div>
+            <!-- Section 8 Content -->
+            <div class="flex flex-col items-center justify-center animate8">
+                <div
+                    class="flex flex-col justify-center items-center rounded-full lg:border border-[#fffdcf] size-[35rem]">
+                    <div class="flex flex-col items-center gap-4">
+                        <p class="text-[#fffdcf] text-7xl font-anton reveal-text8">CONTACT US!</p>
+                        <p class="text-2xl text-[#121212] font-anton bg-[#fffdcf] px-4 py-2 rounded-full">
+                            HELLO@EXAMPLE.COM</p>
+                        <div class="flex gap-4 mt-2">
+                            <img src="assets/svg/instagram.svg" alt="ig" class="size-8">
+                            <img src="assets/svg/youtube.svg" alt="yt" class="size-8">
+                            <img src="assets/svg/twitter.svg" alt="twt" class="size-8">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Script -->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/scroll.js"></script>
+    <script src="assets/js/animation.js"></script>
+</body>
+
+
+</html>
